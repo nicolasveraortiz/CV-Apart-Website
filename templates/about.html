@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "header.html"%}
+    <!-- Header Start -->
+    <div class="container-fluid page-header d-flex align-items-center justify-content-center rounded" style="background-image: url('static/assets/img/cv-apart-photos/landscape2.jpg'); background-size: cover; background-position: center; min-height: 400px;">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                <h3 class="display-4 text-white text-uppercase">About</h3>
+                <div class="d-inline-flex text-white">
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Nosotros</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-6" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="{{url_for('static', filename='assets/img/cv-apart-photos/landscape.jpg')}}" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pb-lg-5">
+                    <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Nosotros</h6>
+                        <h1 class="mb-3">Somos una empresa familiar en Resistencia, con años de experiencia</h1>
+                        <p>CV Apart fue un proyecto familiar llevado a cabo en 2018. Los departamentos en su principio eran muy sencillos y monotonos, pero con el paso del tiempo, fuimos mejorando nuestros servicios, y planeamos seguir haciendolo. <br>
+                        Nuestro objetivo es que el inquilino se sienta como en casa, que tengan una experiencia agradable, y que se vayan con un recuerdo inolvidable. <br>
+                        Esperamos seguir brindando nuestros servicios con el paso de los años, y seguir mejorandolos aun más. ¡He aquí algunos de nuestros departamentos y clientes nuestros!</p>
+                        <a href="" class="btn btn-primary mt-1">Reserva Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+     <!-- Feature Start -->
+    <div class="container-fluid pt-3">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <i class="fa-2x fa-solid fa-leaf text-white"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class="">¡Comprometidos con el medio ambiente!</h5>
+                            <p class="m-0">Nuestras instalaciones cuentan con cuidados, y electrodomesticos de bajo consumo. ¡Y el ambiente se encuentra completamente poblado de plantas de diversas especies!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <i class="fa fa-2x fa-award text-white"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class="">¡Uno de los mejores vendedores de Resistencia!</h5>
+                            <p class="m-0">¡Departamentos cómodos y modernos a precio competitivo! ¡Con más de 5 años de experiencia y más de 300 opiniones en las diversas plataformas!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                            </svg>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class="">Ubicación Estratégica</h5>
+                            <p class="m-0">Descubre la ubicación ideal para tu próxima escapada en nuestro complejo de departamentos. Estratégicamente ubicado a solo 14 km de Corrientes, 11 km del aeropuerto y a tan solo 5 km del vibrante centro de Resistencia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+
+    <!-- Facilities Start -->
+    <div class="container-fluid pb-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Imágenes</h6>
+                <h1>Nuestras Instalaciones</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto1-img.jpg')}}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-primary rounded" href="{{url_for('show_info', id=1)}}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                      <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                      <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Departamento 1</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto2-img.JPG')}}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-primary rounded" href="{{url_for('show_info', id=2)}}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                      <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                      <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Departamento 2</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto3-beds2.JPG')}}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-primary rounded" href="{{url_for('show_info', id=3)}}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                      <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                      <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Departamento 3</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/pool-img.JPG')}}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-primary rounded" href="{{url_for('show_info', id=4)}}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                      <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                      <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Instalaciones</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facilities End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-2">
+        <div class="container py-5">
+            <div class="text-center mb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonios</h6>
+                <h1>¡Lo que dicen nuestros clientes!</h1>
+            </div>
+            <script src="https://widget.trustmary.com/9e4Lj-rm1"></script>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+{% include "footer.html" %}
+
+</html>

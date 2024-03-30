@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'header.html' %}
+<body>
+
+<div class="container pt-5 pb-3">
+    <div class="text-center mb-3 pb-3">
+        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Información</h6>
+        <h1>{{ requested_facility.title }}</h1>
+    </div>
+    <div class="row">
+        {% for img in requested_facility.images %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="package-item bg-white mb-2">
+                    <img class="img-fluid rounded" src="{{ url_for('static', filename=img) }}" alt="">
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+     <div class="text-center mb-3 pt-3">
+        <h1>Servicios y Prestaciones</h1>
+    </div>
+<div class="container pt-5 pb-3">
+    <ul class="list-group custom-font">
+        {% for item in requested_facility.description %}
+            <li class="list-group-item mb-3">{{ item }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+</div>
+    <!-- Packages End -->
+
+</body>
+{% include 'footer.html' %}
+</html>

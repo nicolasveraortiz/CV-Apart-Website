@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "header.html"%}
+<body>
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel" >
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <video class="d-block w-100 video-slide" autoplay muted loop>
+                        <source src="{{url_for('static',filename='assets/img/cv-apart-photos/video/video1.mp4')}}" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-3 text-white mb-md-4 typewriter">¡Planea una escapadita romántica!</h1>
+                            <a href="https://www.booking.com/Share-4l8mj3" class="btn btn-primary rounded py-md-3 px-md-5 mt-2">¡Reserva ahora!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <video class="d-block w-100 video-slide" autoplay muted loop>
+                        <source src="{{url_for('static',filename='assets/img/cv-apart-photos/video/video3.mp4')}}" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-3 text-white mb-md-4">¡Departamentos al aire libre!</h1>
+                            <a href="{{url_for('facilities')}}" class="btn btn-primary rounded py-md-3 px-md-5 mt-2">Ver Imágenes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <video class="d-block w-100 video-slide" autoplay muted loop>
+                        <source src="{{url_for('static',filename='assets/img/cv-apart-photos/video/video2.mp4')}}" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-3 text-white mb-md-4">Naturaleza y Elegancia en Sintonía</h1>
+                            <a href="https://wa.link/vb0k3u" class="btn btn-primary rounded py-md-3 px-md-5 mt-2">¡Llama ahora!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <video class="d-block w-100 video-slide" autoplay muted loop>
+                        <source src="{{url_for('static',filename='assets/img/cv-apart-photos/video/video4.mp4')}}" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-3 text-white mb-md-4">Armonía Natural, Confort Urbano</h1>
+                            <a href="{{url_for('testimonial')}}" class="btn btn-primary rounded py-md-3 px-md-5 mt-2">¡Mira las opiniones!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-prev-icon mb-n2"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-next-icon mb-n2"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Booking Start -->
+    <div class="container-fluid booking mt-5">
+        <div class="container">
+            <div class="bg-light shadow" style="padding: 30px;">
+                <div class="row align-items-center" style="min-height: 60px;">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mb-3 mb-md-0">
+                                    <select class="custom-select px-4" style="height: 47px;">
+                                        <option selected>Adultos</option>
+                                        <option value="1">Destination 1</option>
+                                        <option value="2">Destination 1</option>
+                                        <option value="3">Destination 1</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3 mb-md-0">
+                                    <select class="custom-select px-4" style="height: 47px;">
+                                        <option selected>Menores</option>
+                                        <option value="1">Duration 1</option>
+                                        <option value="2">Duration 1</option>
+                                        <option value="3">Duration 1</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3 mb-md-0">
+                                    <div class="date" id="date1" data-target-input="nearest">
+                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Fecha de entrada" data-target="#date1" data-toggle="datetimepicker"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3 mb-md-0">
+                                    <div class="date" id="date2" data-target-input="nearest">
+                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Fecha de salida" data-target="#date2" data-toggle="datetimepicker"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary rounded btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Booking End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-6" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="{{url_for('static', filename='assets/img/cv-apart-photos/landscape.jpg')}}" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pb-lg-5">
+                    <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Nosotros</h6>
+                        <h1 class="mb-3">¿Quienes somos?</h1>
+                        <p>Somos una empresa familiar que presta servicios de alquiler de departamentos amueblados por noche, dentro de un predio con piscina y gran espacio verde. ¡Ideal para un viaje con amigos o familia!</p>
+                        <div class="row mb-4">
+                            <div class="col-6">
+                            </div>
+                        </div>
+                        <a href="https://wa.link/vb0k3u" class="btn btn-primary rounded mt-1">¡Llama ahora!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Feature Start -->
+    <div class="container-fluid pt-3">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <i class="fa-2x fa-solid fa-leaf text-white"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class="">¡Comprometidos con el medio ambiente!</h5>
+                            <p class="m-0">Nuestras instalaciones cuentan con cuidados, y electrodomesticos de bajo consumo. ¡Y el ambiente se encuentra completamente poblado de plantas de diversas especies!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <i class="fa fa-2x fa-award text-white"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class="">¡Uno de los mejores vendedores de Resistencia!</h5>
+                            <p class="m-0">¡Departamentos cómodos y modernos a precio competitivo! ¡Con más de 5 años de experiencia y más de 300 opiniones en las diversas plataformas!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3" style="height: 100px; width: 100px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                            </svg>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class="">Ubicación Estratégica</h5>
+                            <p class="m-0">Descubre la ubicación ideal para tu próxima escapada en nuestro complejo de departamentos. Estratégicamente ubicado a solo 14 km de Corrientes, 11 km del aeropuerto y a tan solo 5 km del vibrante centro de Resistencia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+    <div style="width: 85%; margin: 0 auto;">
+      <svg height="1" width="100%">
+        <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#ccc;stroke-width:2" />
+      </svg>
+    </div>
+
+    <!-- Service Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Servicios</h6>
+                <h1>Servicios Destacados</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
+                        <h5 class="mb-2">Ubicación Estratégica</h5>
+                        <p class="m-0">Descubre la ubicación ideal para tu próxima escapada en nuestro complejo de departamentos. Estratégicamente ubicado a solo 14 km de Corrientes, 11 km del aeropuerto y a tan solo 5 km del vibrante centro de Resistencia.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                        <i class="fa fa-2x fa-solid fa-person-swimming mx-auto mb-4"></i>
+                        <h5 class="mb-2">Piscina al aire libre</h5>
+                        <p class="m-0">Sumérgete en la diversión en nuestra piscina al aire libre, diseñada para complacer a toda la familia. Con su parte de playa y profundidad adecuada, es ideal para todos, desde los más pequeños hasta los adultos que desean relajarse. ¡Déjate llevar por la frescura del agua y disfruta del sol en nuestra amplia piscina!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
+                        <i class="fa fa-solid fa-tree fa-2x mx-auto mb-4"></i>
+                        <h5 class="mb-2">Jardín</h5>
+                        <p class="m-0">Descubre la serenidad de nuestro amplio jardín verde, un oasis de tranquilidad que acoge una variedad de plantas, cuidadosamente seleccionadas para preservar nuestro ecosistema. ¡Déjate envolver por la naturaleza y encuentra tu lugar de paz entre nuestros rincones verdes!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center">
+                <a href="{{url_for('services')}}" class="btn btn-primary rounded py-md-3 px-md-5 mt-2">Ver todos los servicios</a>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+    <div style="width: 85%; margin: 0 auto;">
+      <svg height="1" width="100%">
+        <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#ccc;stroke-width:2" />
+      </svg>
+    </div>
+
+    <!-- Packages Start -->
+    <div class="container-fluid">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Información</h6>
+                <h1>Departamentos Amueblados</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto1-img.jpg')}}" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bounding-box-circles" viewBox="0 0 16 16">
+                                      <path d="M2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M0 2a2 2 0 0 1 3.937-.5h8.126A2 2 0 1 1 14.5 3.937v8.126a2 2 0 1 1-2.437 2.437H3.937A2 2 0 1 1 1.5 12.063V3.937A2 2 0 0 1 0 2m2.5 1.937v8.126c.703.18 1.256.734 1.437 1.437h8.126a2 2 0 0 1 1.437-1.437V3.937A2 2 0 0 1 12.063 2.5H3.937A2 2 0 0 1 2.5 3.937M14 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M2 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                                    </svg>56 m&sup2;
+                                </small>
+                                <small class="m-0"><img src="{{url_for('static', filename='assets/img/double-bed.png')}}" width="11" height="11"> 2 habitaciones</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>6 Personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="{{url_for('show_info', id=1)}}">Departamento 1</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <h5 class="m-0">$75</h5>
+                                    <a href="https://www.booking.com/Share-4l8mj3" class="btn btn-primary rounded py-md-1 px-md-3 mt-1">¡Reserva ahora!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto2-img.JPG')}}" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bounding-box-circles" viewBox="0 0 16 16">
+                                      <path d="M2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M0 2a2 2 0 0 1 3.937-.5h8.126A2 2 0 1 1 14.5 3.937v8.126a2 2 0 1 1-2.437 2.437H3.937A2 2 0 1 1 1.5 12.063V3.937A2 2 0 0 1 0 2m2.5 1.937v8.126c.703.18 1.256.734 1.437 1.437h8.126a2 2 0 0 1 1.437-1.437V3.937A2 2 0 0 1 12.063 2.5H3.937A2 2 0 0 1 2.5 3.937M14 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M2 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                                    </svg>53 m&sup2;
+                                </small>
+                                <small class="m-0"><img src="{{url_for('static', filename='assets/img/double-bed.png')}}" width="11" height="11"> 2 habitaciones</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>5 Personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="{{url_for('show_info', id=2)}}">Departamento 2</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <h5 class="m-0">$70</h5>
+                                    <a href="https://www.booking.com/Share-4l8mj3" class="btn btn-primary rounded py-md-1 px-md-3 mt-1">¡Reserva ahora!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto3-beds2.JPG')}}" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bounding-box-circles" viewBox="0 0 16 16">
+                                      <path d="M2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M0 2a2 2 0 0 1 3.937-.5h8.126A2 2 0 1 1 14.5 3.937v8.126a2 2 0 1 1-2.437 2.437H3.937A2 2 0 1 1 1.5 12.063V3.937A2 2 0 0 1 0 2m2.5 1.937v8.126c.703.18 1.256.734 1.437 1.437h8.126a2 2 0 0 1 1.437-1.437V3.937A2 2 0 0 1 12.063 2.5H3.937A2 2 0 0 1 2.5 3.937M14 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M2 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                                    </svg>53 m&sup2;
+                                </small>
+                                <small class="m-0"><img src="{{url_for('static', filename='assets/img/double-bed.png')}}" width="11" height="11"> 1 habitación</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>4 Personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="{{url_for('show_info', id=3)}}">Departamento 3</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <h5 class="m-0">$65</h5>
+                                    <a href="https://www.booking.com/Share-4l8mj3" class="btn btn-primary rounded py-md-1 px-md-3 mt-1">¡Reserva ahora!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Packages End -->
+
+    <!-- Registration Start -->
+    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Oferta!</h6>
+                        <h1 class="text-white"><span class="text-primary">5% OFF</span> Para tu próxima reserva!</h1>
+                    </div>
+                    <p class="text-white">¡Realiza tu primera reserva en la página y obten un descuento del 5%!</p>
+                    <ul class="list-inline text-white m-0">
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>¡Tu reserva quedará confirmada sin necesidad de un pago!</li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>¡Cancela gratis cuando quieras!</li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>¡Aprovechá el descuento y infórmate de promociones!</li>
+                    </ul>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card border-0">
+                        <div class="card-header bg-primary text-center p-4">
+                            <h1 class="text-white m-0">Registrate</h1>
+                        </div>
+                        <div class="card-body rounded-bottom bg-white p-5">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control p-4" placeholder="Tu nombre" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control p-4" placeholder="Tu correo electrónico" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="custom-select px-4" style="height: 47px;">
+                                        <option selected>Select a destination</option>
+                                        <option value="1">destination 1</option>
+                                        <option value="2">destination 1</option>
+                                        <option value="3">destination 1</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary rounded btn-block py-3" type="submit">Registrarse ahora</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Registration End -->
+
+    <!-- Facilities Start -->
+    <div class="container-fluid py-2">
+        <div class="container pt-3 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Imágenes</h6>
+                <h1>Nuestras Instalaciones</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto1-img.jpg')}}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-primary rounded" href="{{url_for('show_info', id=1)}}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                      <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                      <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Departamento 1</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto2-img.JPG')}}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-primary rounded" href="{{url_for('show_info', id=2)}}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-eye" viewBox="0 0 16 16">
+                                      <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                      <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Departamento 2</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto3-beds2.JPG')}}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-primary rounded" href="{{url_for('show_info', id=3)}}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                      <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                      <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center py-4">
+                            <h5 class="text-truncate">Departamento 3</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-6 pb-2">
+                    <div class="team-item bg-white mb-4">
+                        <div class="team-img position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/pool-img.JPG')}}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-primary rounded" href="{{url_for('show_info', id=4)}}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-eye" viewBox="0 0 16 16">
+                                      <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                                      <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-center py-3">
+                            <h5 class="text-truncate">Instalaciones</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+    <div style="width: 85%; margin: 0 auto;">
+      <svg height="1" width="100%">
+        <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#ccc;stroke-width:2" />
+      </svg>
+    </div>
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-2">
+        <div class="container py-5">
+            <div class="text-center mb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonios</h6>
+                <h1>¡Lo que dicen nuestros clientes!</h1>
+            </div>
+            <script src="https://widget.trustmary.com/9e4Lj-rm1"></script>
+        </div>
+    </div>
+
+    <!-- Testimonial End -->
+</body>
+{% include "footer.html" %}
+</html>

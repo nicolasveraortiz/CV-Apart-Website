@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'header.html' %}
+<body>
+
+<!-- Header Start -->
+<div class="container-fluid page-header d-flex align-items-center justify-content-center rounded" style="background-image: url('static/assets/img/cv-apart-photos/landscape.jpg'); background-size: cover; background-position: center; min-height: 400px;">
+    <div class="container text-center text-white">
+        <h3 class="display-4 text-uppercase text-white">Instalaciones</h3>
+    </div>
+</div>
+<!-- Header End -->
+
+
+<div class="container-fluid py-5">
+    <div class="container">
+        <p>Nuestras instalaciones abrieron en el año 2018. Durante los últimos años, estuvimos remodelando y adaptando las instalaciones a las necesidades del usuario. ¡Aquí se encuentran algunas imágenes de todo lo que le ofrecemos al usuario!</p>
+    </div>
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Información</h6>
+                <h1>Departamentos Amueblados</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid rounded" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto1-img.jpg')}}" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bounding-box-circles" viewBox="0 0 16 16">
+                                      <path d="M2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M0 2a2 2 0 0 1 3.937-.5h8.126A2 2 0 1 1 14.5 3.937v8.126a2 2 0 1 1-2.437 2.437H3.937A2 2 0 1 1 1.5 12.063V3.937A2 2 0 0 1 0 2m2.5 1.937v8.126c.703.18 1.256.734 1.437 1.437h8.126a2 2 0 0 1 1.437-1.437V3.937A2 2 0 0 1 12.063 2.5H3.937A2 2 0 0 1 2.5 3.937M14 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M2 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                                    </svg>56 m&sup2;
+                                </small>
+                                <small class="m-0"><img src="{{url_for('static', filename='assets/img/double-bed.png')}}" width="11" height="11"> 2 habitaciones</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>6 Personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="{{url_for('show_info', id=1)}}">Departamento 1</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <h5 class="m-0">$70</h5>
+                                    <a class="btn btn-outline-primary rounded" href="{{url_for('show_info', id=1)}}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid rounded" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto2-img.JPG')}}" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bounding-box-circles" viewBox="0 0 16 16">
+                                      <path d="M2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M0 2a2 2 0 0 1 3.937-.5h8.126A2 2 0 1 1 14.5 3.937v8.126a2 2 0 1 1-2.437 2.437H3.937A2 2 0 1 1 1.5 12.063V3.937A2 2 0 0 1 0 2m2.5 1.937v8.126c.703.18 1.256.734 1.437 1.437h8.126a2 2 0 0 1 1.437-1.437V3.937A2 2 0 0 1 12.063 2.5H3.937A2 2 0 0 1 2.5 3.937M14 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M2 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                                    </svg>53 m&sup2;
+                                </small>
+                                <small class="m-0"><img src="{{url_for('static', filename='assets/img/double-bed.png')}}" width="11" height="11"> 2 habitaciones</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>5 Personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="{{url_for('show_info', id=2)}}">Departamento 2</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <h5 class="m-0">$65</h5>
+                                    <a class="btn btn-outline-primary rounded" href="{{url_for('show_info', id=2)}}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid rounded" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto3-beds2.JPG')}}" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bounding-box-circles" viewBox="0 0 16 16">
+                                      <path d="M2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M0 2a2 2 0 0 1 3.937-.5h8.126A2 2 0 1 1 14.5 3.937v8.126a2 2 0 1 1-2.437 2.437H3.937A2 2 0 1 1 1.5 12.063V3.937A2 2 0 0 1 0 2m2.5 1.937v8.126c.703.18 1.256.734 1.437 1.437h8.126a2 2 0 0 1 1.437-1.437V3.937A2 2 0 0 1 12.063 2.5H3.937A2 2 0 0 1 2.5 3.937M14 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M2 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                                    </svg>53 m&sup2;
+                                </small>
+                                <small class="m-0"><img src="{{url_for('static', filename='assets/img/double-bed.png')}}" width="11" height="11"> 1 habitación</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>4 Personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="{{url_for('show_info', id=3)}}">Departamento 3</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <h5 class="m-0">$70</h5>
+                                    <a class="btn btn-outline-primary rounded" href="{{url_for('show_info', id=3)}}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="round col-lg-12 col-md-12 mb-4">
+            <div class="package-item bg-white mb-2 py-3">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="rounded" src="{{url_for('static', filename='assets/img/cv-apart-photos/pool-img.JPG')}}" alt="" width="1050" height="750">
+                    </div>
+                    <div class="p-4">
+                        <div class="d-flex justify-content-between mb-3">
+
+                        </div>
+                        <a class="h5 text-decoration-none text-center" href="{{url_for('show_info', id=4)}}">Instalaciones</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between align-items-end">
+                                    <a class="btn btn-outline-primary rounded" href="{{url_for('show_info', id=4)}}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Packages End -->
+
+</body>
+{% include 'footer.html' %}
+</html>
