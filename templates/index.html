@@ -65,58 +65,6 @@
     </div>
     <!-- Carousel End -->
 
-    <!-- Booking Start -->
-    <div class="container-fluid booking mt-5">
-        <div class="container">
-            <div class="bg-light shadow" style="padding: 30px;">
-                <div class="row align-items-center" style="min-height: 60px;">
-                    <div class="col-md-10">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Adultos</option>
-                                        <option value="1">Destination 1</option>
-                                        <option value="2">Destination 1</option>
-                                        <option value="3">Destination 1</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Menores</option>
-                                        <option value="1">Duration 1</option>
-                                        <option value="2">Duration 1</option>
-                                        <option value="3">Duration 1</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Fecha de entrada" data-target="#date1" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Fecha de salida" data-target="#date2" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-primary rounded btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Booking End -->
-
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container pt-5">
@@ -318,55 +266,6 @@
     </div>
     <!-- Packages End -->
 
-    <!-- Registration Start -->
-    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-7 mb-5 mb-lg-0">
-                    <div class="mb-4">
-                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Oferta!</h6>
-                        <h1 class="text-white"><span class="text-primary">5% OFF</span> Para tu próxima reserva!</h1>
-                    </div>
-                    <p class="text-white">¡Realiza tu primera reserva en la página y obten un descuento del 5%!</p>
-                    <ul class="list-inline text-white m-0">
-                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>¡Tu reserva quedará confirmada sin necesidad de un pago!</li>
-                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>¡Cancela gratis cuando quieras!</li>
-                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>¡Aprovechá el descuento y infórmate de promociones!</li>
-                    </ul>
-                </div>
-                <div class="col-lg-5">
-                    <div class="card border-0">
-                        <div class="card-header bg-primary text-center p-4">
-                            <h1 class="text-white m-0">Registrate</h1>
-                        </div>
-                        <div class="card-body rounded-bottom bg-white p-5">
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" class="form-control p-4" placeholder="Tu nombre" required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control p-4" placeholder="Tu correo electrónico" required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Select a destination</option>
-                                        <option value="1">destination 1</option>
-                                        <option value="2">destination 1</option>
-                                        <option value="3">destination 1</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <button class="btn btn-primary rounded btn-block py-3" type="submit">Registrarse ahora</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Registration End -->
-
     <!-- Facilities Start -->
     <div class="container-fluid py-2">
         <div class="container pt-3 pb-3">
@@ -378,7 +277,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 pb-2">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto1-img.jpg')}}" alt="">
+                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto1-img.jpg')}}" alt="Habitación de departamento grande, tres camas en la habitación">
                             <div class="team-social">
                                 <a class="btn btn-primary rounded" href="{{url_for('show_info', id=1)}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -396,7 +295,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 pb-2">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto2-img.JPG')}}" alt="">
+                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto2-img.JPG')}}" alt="Imágen de la cocina de un departamento">
                             <div class="team-social">
                                 <a class="btn btn-primary rounded" href="{{url_for('show_info', id=2)}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-eye" viewBox="0 0 16 16">
@@ -414,7 +313,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 pb-2">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto3-beds2.JPG')}}" alt="">
+                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/dpto3-beds2.JPG')}}" alt="Imágen de la cama del departamento pequeño">
                             <div class="team-social">
                                 <a class="btn btn-primary rounded" href="{{url_for('show_info', id=3)}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -432,7 +331,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-6 pb-2">
                     <div class="team-item bg-white mb-4">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/pool-img.JPG')}}" alt="">
+                            <img class="img-fluid w-100" src="{{url_for('static', filename='assets/img/cv-apart-photos/pool-img.JPG')}}" alt="Piscina larga foto tomada desde arriba">
                             <div class="team-social">
                                 <a class="btn btn-primary rounded" href="{{url_for('show_info', id=4)}}">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-eye" viewBox="0 0 16 16">

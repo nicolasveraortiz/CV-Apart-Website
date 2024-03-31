@@ -47,7 +47,9 @@
     color: #333; /* Color del texto */
     margin-bottom: 20px; /* Espaciado inferior */
 }
-
+.service-letter{
+    font-size: 16px;
+}
 .description strong {
     font-weight: bold; /* Estilo en negrita para el texto fuerte */
 }

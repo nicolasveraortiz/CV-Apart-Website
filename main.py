@@ -1,22 +1,28 @@
-from datetime import date
-from flask import Flask, abort, render_template, redirect, url_for, flash, request
-from flask_bootstrap import Bootstrap4
-import smtplib
-from flask_ckeditor import CKEditor
-from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user, login_required
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
-from sqlalchemy import Integer, String, Text, ForeignKey
-from functools import wraps
-from werkzeug.security import generate_password_hash, check_password_hash
-from dotenv import load_dotenv, find_dotenv
 import os
+import smtplib
+from dotenv import load_dotenv, find_dotenv
+from flask import Flask, render_template, request
+from flask_bootstrap import Bootstrap4
+
+# Future Improvements
+
+# from flask import abort, redirect, flash
+# from datetime import date
+# from flask_ckeditor import CKEditor
+# from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user, login_required
+# from flask_sqlalchemy import SQLAlchemy
+# from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
+# from sqlalchemy import Integer, String, Text, ForeignKey
+# from functools import wraps
+# from werkzeug.security import generate_password_hash, check_password_hash
+
 
 app = Flask(__name__)
 bootstrap = Bootstrap4(app)
 
 dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
+
 MY_EMAIL = os.getenv("MY_EMAIL")
 PASSWORD = os.getenv("PASSWORD")
 
@@ -70,10 +76,27 @@ def show_info(id):
     departments = {
         1: {
             "title": "Departamento 1",
-            "description": ["Departamento completamente amueblado con cocina-comedor, con todos los electrodomesticos."
-                            "herramientas de cocina, platos, vasos, utensilios.", "Con aire acondicionado frío/calor."
-                , "Con Smart TV", "2 Habitaciones.", "Para 6 personas.", "Apto para menores.",
-                            "Baño completamente equipado."],
+            "description": [
+                "Departamento cómodo completamente amueblado",
+                "Todos los electrodomésticos.",
+                "Cocina-comedor y todas las herramientas de cocina (platos, vasos, utensilios, etc.)",
+                "Con aire acondicionado frío/calor.",
+                "Con Smart TV", "Conexión a Internet gratuita", "2 Habitaciones.",
+                "Para 6 personas.",
+                "Apto para menores.",
+                "Baño completamente equipado."],
+            "symbols": [
+                "fa-solid fa-couch",
+                "fa-solid fa-plug",
+                "fa-solid fa-kitchen-set ",
+                "fa-solid fa-snowflake",
+                "fa-solid fa-tv",
+                "fa-solid fa-wifi",
+                "fa-solid fa-bed",
+                "fa-solid fa-user",
+                "fa-solid fa-children",
+                "fa-solid fa-sink"
+            ],
             "images": [
                 "assets/img/cv-apart-photos/cvapart.jpg",
                 "assets/img/cv-apart-photos/dpto1-beds.jpg",
@@ -88,10 +111,27 @@ def show_info(id):
         },
         2: {
             "title": "Departamento 2",
-            "description": ["Departamento completamente amueblado con cocina-comedor, con todos los electrodomesticos."
-                            "herramientas de cocina, platos, vasos, utensilios.", "Con aire acondicionado frío/calor."
-                , "Con Smart TV", "2 Habitaciones.", "Para 5 personas.", "Apto para menores.",
-                            "Baño completamente equipado."],
+            "description": [
+                "Departamento cómodo completamente amueblado",
+                "Todos los electrodomésticos.",
+                "Cocina-comedor y todas las herramientas de cocina (platos, vasos, utensilios, etc.)",
+                "Con aire acondicionado frío/calor.",
+                "Con Smart TV", "Conexión a Internet gratuita", "2 Habitaciones.",
+                "Para 5 personas.",
+                "Apto para menores.",
+                "Baño completamente equipado."],
+            "symbols": [
+                "fa-solid fa-couch",
+                "fa-solid fa-plug",
+                "fa-solid fa-kitchen-set ",
+                "fa-solid fa-snowflake",
+                "fa-solid fa-tv",
+                "fa-solid fa-wifi",
+                "fa-solid fa-bed",
+                "fa-solid fa-user",
+                "fa-solid fa-children",
+                "fa-solid fa-sink"
+            ],
             "images": [
                 "assets/img/cv-apart-photos/dpto2-beds.jpg",
                 "assets/img/cv-apart-photos/dpto2-tv.jpg",
@@ -104,10 +144,27 @@ def show_info(id):
         },
         3: {
             "title": "Departamento 3",
-            "description": ["Departamento completamente amueblado con cocina-comedor, con todos los electrodomesticos."
-                            "herramientas de cocina, platos, vasos, utensilios.", "Con aire acondicionado frío/calor."
-                , "Con Smart TV", "1 Habitación.", "Para 4 personas.", "Apto para menores.",
-                            "Baño completamente equipado."],
+            "description": [
+                "Departamento cómodo completamente amueblado",
+                "Todos los electrodomésticos.",
+                "Cocina-comedor y todas las herramientas de cocina (platos, vasos, utensilios, etc.)",
+                "Con aire acondicionado frío/calor.",
+                "Con Smart TV", "Conexión a Internet gratuita", "1 Habitación.",
+                "Para 4 personas.",
+                "Apto para menores.",
+                "Baño completamente equipado."],
+            "symbols": [
+                "fa-solid fa-couch",
+                "fa-solid fa-plug",
+                "fa-solid fa-kitchen-set ",
+                "fa-solid fa-snowflake",
+                "fa-solid fa-tv",
+                "fa-solid fa-wifi",
+                "fa-solid fa-bed",
+                "fa-solid fa-user",
+                "fa-solid fa-children",
+                "fa-solid fa-sink"
+            ],
             "images": [
                 "assets/img/cv-apart-photos/dpto3-beds.JPG",
                 "assets/img/cv-apart-photos/dpto3-beds2.JPG",
@@ -118,10 +175,25 @@ def show_info(id):
         },
         4: {
             "title": "Instalaciones",
-            "description": ["Gran espacio verde", "Estacionamiento Gratuito", "Gran variedad de plantas",
+            "description": ["Gran espacio verde",
+                            "Estacionamiento Gratuito",
+                            "Gran variedad de plantas",
                             "Parrilla Móvil",
-                            "Parrilla Fija", "Piscina", "Ducha", "Sillas", "Apto para menores",
+                            "Parrilla Fija", "Piscina", "Ducha",
+                            "Sillas", "Apto para menores",
                             "Espacio para compartir"],
+            "symbols": [
+                "fa-brands fa-pagelines",
+                "fa-solid fa-square-parking",
+                "fa-solid fa-leaf",
+                "fa-solid fa-bacon",
+                "fa-solid fa-drumstick-bite",
+                "fa-solid fa-person-swimming",
+                "fa-solid fa-shower",
+                "fa-solid fa-chair",
+                "fa-solid fa-children",
+                "fa-solid fa-people-group"
+            ],
             "images": [
                 "assets/img/cv-apart-photos/flowers.jpg",
                 "assets/img/cv-apart-photos/garden.jpg",
@@ -147,9 +219,16 @@ def show_info(id):
             ]
         }
     }
+
     requested_facility = departments[id]
-    return render_template("facility-info.html", requested_facility=requested_facility)
+    combined_data = [(description, symbols) for description, symbols in zip(requested_facility["description"],
+                                                                            requested_facility["symbols"])]
+    length_list = len(combined_data)
+    return render_template("facility-info.html", requested_facility=requested_facility,
+                           combinated_data=combined_data, lenght_list=length_list)
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+# Clivio Nicolás Vera Ortiz

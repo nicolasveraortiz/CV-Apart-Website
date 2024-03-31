@@ -21,11 +21,22 @@
         <h1>Servicios y Prestaciones</h1>
     </div>
 <div class="container pt-5 pb-3">
-    <ul class="list-group custom-font">
-        {% for item in requested_facility.description %}
-            <li class="list-group-item mb-3">{{ item }}</li>
-        {% endfor %}
-    </ul>
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <ul class="list-group custom-font">
+                {% for description, symbols in combinated_data[:lenght_list//2] %}
+                <li class="list-group-item mb-3 service-letter"><i class="fa-2x {{symbols}}" style="color: #124076"></i> {{description }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <ul class="list-group custom-font">
+                {% for description, symbols in combinated_data[lenght_list//2:] %}
+                <li class="list-group-item mb-3 service-letter"><i class="fa-2x {{symbols}}" style="color: #124076"></i> {{description}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>
 
 </div>
